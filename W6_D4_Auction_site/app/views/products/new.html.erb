@@ -1,0 +1,43 @@
+<h3>Add new product</h3>
+
+<%= form_for [@user, @product] do|f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :deadline %>
+  <%= f.date_field :deadline %>
+
+  <%= f.button %>
+<% end %>
+
+<br>
+<%= link_to "User´s List", "/users" %>
+<br>
+<%= link_to "Home", root_path %>
+
+
+<!-- <form action="/users/:user_id/products" method="POST">
+  <div>
+    <label for="title">Name</label>
+    <input type="text" name="product[title]" id="title">
+  </div>
+
+  <div>
+    <label for="description">Address</label>
+    <textarea name="product[description]" id="description"></textarea>
+  </div>
+
+  <div>
+    <label for="deadline">Phone number</label>
+    <input type="date" name="product[deadline]" id="deadline">
+  </div>
+
+  <button type="submit">Add</button>
+
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+</form> -->

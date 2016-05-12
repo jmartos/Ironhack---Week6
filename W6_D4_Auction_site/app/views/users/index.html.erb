@@ -1,0 +1,10 @@
+<h3>User´s List</h3>
+<ul>
+   <% @users.each do |user| %>
+      <li><a href="http://localhost:3000/users/<%= user.id %>"><%= "#{user.name} " %></a></li>
+       <% end %>
+</ul>
+<br>
+<%= link_to "Add New User", "/users/new" %>
+<br>
+<%= link_to "Home", root_path %>

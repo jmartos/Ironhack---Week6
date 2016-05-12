@@ -1,0 +1,9 @@
+<h3>Products</h3>
+<ul>
+   <% @products.each do |product| %>
+      <li><a href="http://localhost:3000/users/<%= product.user.id %>/products"><%= "#{product.title} - #{product.user.name} - #{product.deadline} " %></a></li>
+       <% end %>
+</ul>
+
+<br>
+<%= link_to "Home", root_path %>

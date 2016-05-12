@@ -1,0 +1,20 @@
+<h3><%= @user.name %></h3>
+
+<ul>
+      <li><%= "Name: #{@user.name}\nEmail: #{@user.email}" %></li>
+</ul>
+
+<br>
+<form action="/users/:id/destroy" method="POST">
+    <button type="submit">Delete</button>
+
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+<br>
+<a href="http://localhost:3000/users/<%= @user.id %>/products">Products</a>
+<br>
+<%= link_to "User´s List", "/users" %>
+<br>
+<%= link_to "Home", root_path %>
+
